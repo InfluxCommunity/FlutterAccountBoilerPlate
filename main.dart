@@ -43,11 +43,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   loadFromStorage() async {
     await accountList.loadFromStorage();
-    client = InfluxDBClient(
-        url: accountList.activeAccount!.url,
-        bucket: "operating",
-        org: accountList.activeAccount!.orgName,
-        token: accountList.activeAccount!.token);
     setState(() {});
   }
 
